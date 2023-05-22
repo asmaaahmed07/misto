@@ -1,0 +1,650 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+/* ###utility classes#### */
+.container{
+    width: 1250px;
+    width: 85%;
+    margin: auto;
+}
+/* ######top###### */
+.top{
+   
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: black;
+    padding: 5px 0;
+}
+.topdesc{
+    display: flex;
+}
+.topicon{
+    margin: 0 10px;  
+}
+.topmedia .topicon{
+ margin: 0 5px;
+ color: #fff;
+}
+/* #####navigation#### */
+.h1logo{
+    font-family: 'Playfair Display';
+    font-size: 3rem;
+   
+}
+/* mediaa pr */
+.checked{
+    opacity: 0;
+}
+.checkbtn{
+    position: absolute;
+    left: 15px;
+    top: 60px;
+    z-index: 3;
+    width: 15px;
+    height: 20px;
+    opacity: 0
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gainsboro;
+    
+}
+.navitem .navdesc{
+    display: flex;
+    font-size: 1.4rem;
+}
+.navicon .navdesc{
+    display: flex;
+}
+.navdesc li{
+    display: block;
+    margin: 10px 8px; 
+    color: black; 
+}
+.navicon .navdesc li a{
+    color: #000;
+}
+/* ###afternavbar### */
+.afternav{
+
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    
+}
+.review{
+    color: orange;
+}
+.navreview{
+    display: flex;
+    align-self: flex-end;
+    color: #5e5e5e;
+}
+.description{
+    align-self: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.afternavlast{
+    display: flex;
+    align-self: flex-end;
+    color: #5e5e5e;
+}
+.afternavlast p, .reviewdesc p{
+    margin-left: 5px;
+}
+.bold{
+    color: #000;
+}
+.mainsection{
+    display: flex;
+}
+.fewimages{
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+}
+
+.mainimage{
+    width: 400px;
+    margin: 0 15px;
+}
+.mainimage img{
+    width: 100%;
+    height: 100%;
+}
+.descmain{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.smallimg{
+    display: flex;
+    
+}
+.smallimg .img{
+     width: 50px;
+     height: 50px;
+}
+.smallimg .img img{
+    width: 100%;
+    height: 100%;
+}
+.img{
+    margin-right: 10px;
+}
+.diffsize{
+    display: flex;
+    margin-bottom: 10px;
+}
+.diffsize p{
+    font-size: 1.1rem;
+    background-color: gray;
+    padding: 10 8px;
+    margin-right: 10px;
+    border: 2px solid transparent;
+}
+.diffsize p:hover{
+    border: 2px solid black;
+}
+.cost{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+    font-size: 1.3rem;
+}
+.cost p,.cost a,.cost i{
+    margin: 10px  20px;
+    padding: 10px;
+}
+.cost a{
+    text-align: center;
+ 
+    background-color: #000;
+    color: #fff;
+}
+.costprice{
+    font-weight: bold;
+}
+.lastmain{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.last{
+    display: flex;
+    /* margin-bottom: 15px; */
+}
+
+
+.lastmain .icon{
+    padding-top: 10px;
+}
+.lastmain .desc{
+    /* align-self: flex-start; */
+    margin-left: 10px;
+
+    font-size: 1.2rem;  
+}
+.checkout{
+position: relative;
+font-size: 1.3rem;
+text-transform: uppercase;
+border-bottom: 1px solid gray;
+margin-bottom: 10px;
+}
+.checkout p::after{
+    content: " ";
+    position: absolute;
+    width: 55%;
+    border-top: 1px solid gray;
+    top: 6.5px;
+}
+.shipping{
+    display: flex; 
+  
+}
+.shipimg{
+    margin: 10px 10px;
+    width: 40px;
+    height: 30px;
+
+}
+.shipping .shipimg img{
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 10px; */
+}
+
+
+#descrip{
+    position: absolute;
+    width: 50%;
+    right: 3%;
+   
+}
+.check{
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 12;
+    opacity: 0;
+}
+.checkinfo{
+    opacity: 0;
+    transform: translateY(-60%);
+    transition: all 0.3s ease-in-out;
+}
+.line{
+    position: absolute;
+    top: 5;
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    border-radius: 10px;
+    z-index: 14;
+}
+.line::after{
+    content: " ";
+    position: absolute;
+
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(90deg);
+    
+}
+.p{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 10px 0;
+    color: gray;
+   /* border-bottom: 1px solid gray; */
+}
+.add{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.add .padd{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+}
+.preview{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.mainreview{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+.afterreview{
+    display: flex;
+}
+.comment{
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.msgdesc{
+    
+    margin-left: 10px;
+}
+.grey{
+    color: gray;
+    font-size: 1.3rem;
+}
+.bold{
+    font-size: 1.3rem;
+}
+.revname{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between ;
+    font-size: 1.3rem;
+}
+.revns{
+    display: flex;
+}
+.revmonth{
+    margin-right: 10px;
+}
+.cmnt{
+    margin: 10px 0;
+    border-bottom: 1px solid gray;
+   font-size: 1.3rem;
+}
+/* ####more product#### */
+.femaleitem{
+   margin-top: 220px;
+    margin-bottom: 30px;
+    display: flex;
+   flex-wrap: wrap;
+   padding-bottom: 20px;
+   transition: all 0.3s ease-in-out;
+   border-bottom: 1px solid gainsboro;
+   
+    
+}
+.fmone{
+   
+    flex-basis: 245px;
+    height: 250px;
+    margin: 30px 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+.flsale{
+    position: absolute ;
+    top: 0;
+    padding: 5px;
+    font-size: 1.2rem;
+    background-color: rgb(166, 16, 66);
+    color: #fff;
+  
+}
+.fmone img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+}
+.fldesc{
+    margin: 15px auto;
+}
+.fldesc p{
+    color: rgb(86, 73, 73);
+    font-size: 1.3rem;
+}
+.flprice p{
+    color: black;
+    font-weight: bold;
+}
+.flprice{
+    display: flex;
+    justify-content: space-between;
+}
+.flrating{
+    color: orange;
+}
+.falast{
+    color: rgb(172, 165, 165);
+}
+.flimg{
+    overflow: hidden;
+}
+
+.fmone:hover img{
+   
+    transform:scale(1.5) ;   
+}
+.fmone:hover{
+    height: 150px;
+
+}
+/* ####### */
+.fmone:hover .flmore{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.flmore{
+   opacity: 0;
+   transform: translateY(-120%);
+
+}
+.moreimg{
+    display: flex;
+    width: 25px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+.moreimg img{
+    margin-right: 20px;
+    padding-left: 3px;
+    object-fit: cover;
+}
+.flsize{
+    
+    width: 60%;
+    margin-bottom: 5px;
+}
+.flsize .size{
+    display: flex;
+    /* padding-top: 15px; */
+    justify-content:space-between;
+}
+.flsize .size li{
+
+    padding: 2px;
+    background-color: rgb(227, 218, 218);
+
+} 
+.flmore .cart{
+  
+    width: 70%;
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#descrip input[type="checkbox"]:checked ~.checkinfo{
+    transform: translateY(0%);
+    opacity: 1;
+}
+#descrip input[type="checkbox"]:checked ~.line{
+    transform: rotate(45deg);
+    
+}
+/* ###media### */
+
+.mediasec{
+    background-color: #000;
+    margin-bottom: 20px;
+}
+.mainmedia{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.mediah2{
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.emailmedia{
+    width: 250px;
+    padding: 5px;
+}
+.join{
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.mainmedia a{
+    color: #fff;
+    margin-left: 10px;
+   
+}
+.endmedia{
+    padding: 10px;
+    font-size: 1.3rem;
+  
+}
+/* ###linksetc### */
+.resource{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.infoh2{
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+.infoul{
+    font-size: 1.3rem;
+  
+}
+.infoul li, .infoul li a{
+    padding-top: 8px;
+    color: #6b6767;
+}
+/* ###footer### */
+#footer{
+    background-color: rgb(236, 235, 235);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: #6b6767;
+    padding: 10px 0;
+}
+.copyright{
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+.shipping{
+    display: flex; 
+}
+.shipimg{
+    width: 40px;
+    height: 30px;
+    margin-left: 10px;
+
+}
+.shipping .shipimg img{
+    width: 100%;
+    height: 100%;
+}
+.designer{
+    padding-top: 10px;
+    font-size: 1.3rem;
+    
+}
+.boldtxt{
+    color: #000
+
+}
+ 
+@media(max-width:855px){
+    html{
+        font-size: 52.5%;
+    }
+    .navitem .navdesc{
+        position: absolute;
+        top: 90px;
+        left: -120%;
+        background-color: rgba(0, 0, 0, 0.639);
+        z-index: 2;
+      flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        padding: 15px;
+    }
+    .navdesc li a{
+        color: #fff;
+    }
+    .navitem .checked{
+        opacity: 0;
+    }
+    .checkbtn{
+        opacity: 1;
+    }
+    .navicon .navdesc{
+        flex-direction: column;
+    }
+    
+   
+    .navitem input[type="checkbox"]:checked ~ .navdesc{
+        left: 0%;
+        
+    }
+
+    .nav{
+        justify-content: space-between;
+    }
+    .mainsection{
+        flex-wrap: wrap;
+    }
+    .descmain{
+        margin-top: 10px;
+    }
+    #descrip{
+        left: 8%;
+    }
+    .femaleitem{
+        margin-top: 270px;
+    }
+    .fmone:hover .flmore{
+        opacity: 0;
+        }
+    .flmore{
+        opacity: 0;
+    }
+}
+@media (max-width:613px) {
+    html{
+        font-size: 42.5%;
+    }
+    .fewimages{
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+    .fewimages img{
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+       
+    }
+    .descmain{
+        width: 100%;
+        height: 100%;
+    }
+    .footer{
+        
+        flex-direction: column;
+        justify-content:space-between ;
+        text-align: center;
+       }
+       .fmone:hover .flmore{
+        opacity: 0;
+        transform: translateY(0%);
+    
+    }
+    .flmore{
+       opacity: 0;
+       transform: translateY(-120%);
+       }
+    
+    
+}
